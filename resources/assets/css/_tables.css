@@ -1,0 +1,21 @@
+/*----------------------------------------
+  Table
+----------------------------------------*/
+table{
+ 
+    background-color: transparent;
+}
+table td, table th{
+    padding: 10px 0;
+}    
+
+/*----------------------------------------
+  Site - Dark Mode - Table
+----------------------------------------*/
+[data-site_mode="dark"] table {
+  background-color: var(--dark-800);
+}
+
+[data-site_mode="dark"] table.striped>tbody>tr:nth-child(odd) {
+    background-color: rgba(33,33,33,0.25);
+}
