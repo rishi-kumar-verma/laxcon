@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GradesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,12 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/grades', function () {
-    return view('grades');
-});
+
+// Route::get('grades', 'GradeController@index');
+Route::get('grades',[GradesController::class,'subGradList']);
 Route::get('/gardessearch', function () {
     return view('gardessearch');
 });
+Route::post('filtergrades',[GradesController::class,'filterSubGradList']);
+
 Route::get('/calculator', function () {
     return view('steel-weight-calculator');
 });
@@ -37,3 +40,4 @@ Route::get('/contact', function () {
 Route::get('/sendaquery', function () {
     return view('sendaquery');
 });
+
