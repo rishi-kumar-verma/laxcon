@@ -37,9 +37,20 @@ class GradesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function filterSubGradList()
+    public function filterSubGradList(StoreGradesRequest $request)
     {
-        $subGradesList = SubGrades::where('status', 1)->get();
+
+        $ni = ['ni', '=', $request->ni];
+        $cr = ['cr', '=', $request->cr];
+        $mo = ['mo', '=', $request->mo];
+        $c = ['c', '=', $request->c];
+        $s = ['s', '=', $request->s];
+        $p = ['p', '=', $request->p];
+        $si = ['si', '=', $request->si];
+        $conditions = [$ni, $cr, $c, $p, $si];
+        $subGradesList = SubGrades::where('status', 1)->where(
+            $conditions
+        )->get();
         return view('grades', compact('subGradesList'));
     }
 

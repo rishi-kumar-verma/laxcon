@@ -174,48 +174,46 @@
             <div class="container">
                 <div class="section">
                     <h6 class="pagetitle">Enter Material Value</h6>
+                    <form method="post" id="search-form-data" name="search-form-data" action="grades" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-field col s12">
+                            <input id="ni" type="text" class="validate" name="ni" placeholder="Nickle" value="">
+                            <label for="first_name1">Nickle(Ni%)</label>
+                        </div>
 
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">Nickle(Ni%)</label>
-                    </div>
+                        <div class="input-field col s12">
+                            <input id="cr" type="text" class="validate" name="cr" placeholder="Chrome" value="">
+                            <label for="first_name1">Chrome(cr%)</label>
+                        </div>
 
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">Chrome(cr%)</label>
-                    </div>
+                        <div class="input-field col s12">
+                            <input id="mo" type="text" class="validate" name="mo" placeholder="Moli" value="">
+                            <label for="first_name1">Moli(Mo%)</label>
+                        </div>
 
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">Moli(Mo%)</label>
-                    </div>
+                        <div class="input-field col s12">
+                            <input id="c" type="text" class="validate" name="c" placeholder="c" value="">
+                            <label for="first_name1">Carbon(C%) </label>
+                        </div>
 
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">Carbon(C%) </label>
-                    </div>
+                        <div class="input-field col s12">
+                            <input id="s" type="text" class="validate" name="s" placeholder="Sulphur" value="">
+                            <label for="first_name1">Sulphur(S%)</label>
+                        </div>
 
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">Sulphur(S%)</label>
-                    </div>
+                        <div class="input-field col s12">
+                            <input id="p" type="text" class="validate" name="p" placeholder="Phosphorous" value="">
+                            <label for="first_name1">Phosphorous(P%)</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="si" type="text" class="validate" name="si" placeholder="Silicon" value="">
+                            <label for="first_name1">Silicon(S%)</label>
+                        </div>
 
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">Phosphorous(P%)</label>
-                    </div>
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">Silicon(S%)</label>
-                    </div>
-
-                    <div class="center">
-                        <a href="#">
-                            <button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">
-                                DISPLAY GRADE</button>
-                        </a>
-                    </div>
-
+                        <div class="center">
+                                <button type="submit" class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">DISPLAY GRADE</button>
+                        </div>
+                    </form>
                     <br><br>
 
                 </div>

@@ -177,52 +177,52 @@
             </div>
             <div class="container">
                 <div class="section">
-
                     <div class="row ">
                         <div class="col s12 pad-0">
                             <ul class="collapsible ">
                                 @foreach ($subGradesList as $grade)
-                                    <li>
-                                        <div class="collapsible-header "><i class="mdi mdi-arrow-down-bold-hexagon-outline"></i>{{$grade->subgradeName}}</div>
-                                        <div class="collapsible-body "><span>
-                                                <table class="responsive-table ">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Carbon (C%)</td>
-                                                            <td>: {{$grade->c}}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Mangnese (Mn%)</td>
-                                                            <td>: {{$grade->mn}}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Phosphorosus (P%)</td>
-                                                            <td>: {{$grade->p}}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Sillicon (Si%)</td>
-                                                            <td>: {{$grade->si}}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Carbon (Cr%)</td>
-                                                            <td>: {{$grade->cr}}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Nickle (Ni%)</td>
-                                                            <td>: {{$grade->ni}}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Moli (Mo%)</td>
-                                                            <td>: {{$grade->mo}}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Other Elements</td>
-                                                            <td>: {{$grade->otherelement}}</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                    </li>
+                                <li>
+                                    
+                                    <div class="collapsible-header "><i class="mdi mdi-arrow-down-bold-hexagon-outline"></i>{{$grade->subgradeName}}</div>
+                                    <div class="collapsible-body "><span>
+                                            <table class="responsive-table ">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Carbon (C%)</td>
+                                                        <td>: {{$grade->c}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mangnese (Mn%)</td>
+                                                        <td>: {{$grade->mn}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Phosphorosus (P%)</td>
+                                                        <td>: {{$grade->p}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sillicon (Si%)</td>
+                                                        <td>: {{$grade->si}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Carbon (Cr%)</td>
+                                                        <td>: {{$grade->cr}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nickle (Ni%)</td>
+                                                        <td>: {{$grade->ni}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Moli (Mo%)</td>
+                                                        <td>: {{$grade->mo}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Other Elements</td>
+                                                        <td>: {{$grade->otherelement}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                    </div>
+                                </li>
                                 @endforeach
                             </ul>
 

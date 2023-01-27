@@ -23,7 +23,7 @@ Route::get('grades',[GradesController::class,'subGradList']);
 Route::get('/gardessearch', function () {
     return view('gardessearch');
 });
-Route::post('filtergrades',[GradesController::class,'filterSubGradList']);
+Route::post('grades',[GradesController::class,'filterSubGradList']);
 
 Route::get('/calculator', function () {
     return view('steel-weight-calculator');
