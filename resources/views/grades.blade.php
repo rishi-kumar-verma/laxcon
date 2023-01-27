@@ -69,11 +69,11 @@
 <!-- BEGIN BODY -->
 
 <body class="html" data-header="light" data-footer="light" data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
-    <div class="preloader-background">
+    <!-- <div class="preloader-background">
         <div class="preloader-wrapper">
             <div id="preloader"></div>
         </div>
-    </div>
+    </div> -->
 
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
@@ -182,7 +182,6 @@
                             <ul class="collapsible ">
                                 @foreach ($subGradesList as $grade)
                                 <li>
-                                    
                                     <div class="collapsible-header "><i class="mdi mdi-arrow-down-bold-hexagon-outline"></i>{{$grade->subgradeName}}</div>
                                     <div class="collapsible-body "><span>
                                             <table class="responsive-table ">
@@ -190,6 +189,10 @@
                                                     <tr>
                                                         <td>Carbon (C%)</td>
                                                         <td>: {{$grade->c}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sulphur(S%)</td>
+                                                        <td>: {{$grade->s}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mangnese (Mn%)</td>

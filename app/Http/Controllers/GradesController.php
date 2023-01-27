@@ -40,17 +40,73 @@ class GradesController extends Controller
     public function filterSubGradList(StoreGradesRequest $request)
     {
 
-        $ni = ['ni', '=', $request->ni];
-        $cr = ['cr', '=', $request->cr];
-        $mo = ['mo', '=', $request->mo];
-        $c = ['c', '=', $request->c];
-        $s = ['s', '=', $request->s];
-        $p = ['p', '=', $request->p];
-        $si = ['si', '=', $request->si];
-        $conditions = [$ni, $cr, $c, $p, $si];
-        $subGradesList = SubGrades::where('status', 1)->where(
-            $conditions
-        )->get();
+        // $ni = ['ni', '=', $request->ni];
+        // $cr = ['cr', '=', $request->cr];
+        // $mo = ['mo', '=', $request->mo];
+        // $c = ['c', '=', $request->c];
+        // $s = ['s', '=', $request->s];
+        // $p = ['p', '=', $request->p];
+        // $si = ['si', '=', $request->si];
+        // $ni = $request->ni;
+        // $cr = $request->cr;
+        // $mo = $request->mo;
+        // $c = $request->c;
+        // $s = $request->s;
+        // $p = $request->p;
+        // $si = $request->si;
+        $subGradesList = [];
+        $gradesList = SubGrades::where('status', 1)->get();
+        foreach ($gradesList as $grades) {
+            $check = 0;
+            $arr = json_decode($grades);
+            foreach ($arr as $key=>$grade) {
+
+                if ($key == 'ni') {
+                    $c = $request->ni;
+                } else if ($key == 'cr' && $request->cr) {
+                    $c = $request->cr;
+                } else 
+                if ($key == 'mo' && $request->mo) {
+                    $c = $request->mo;
+                } else if ($key == 'c' && $request->c) {
+                    $c = $request->c;
+                } else if ($key == 's' && $request->s) {
+                    $c = $request->s;
+                } else if ($key == 'p' && $request->p) {
+                    $c = $request->p;
+                } else if ($key == 'si' && $request->si) {
+                    $c = $request->si;
+                } else {
+                    continue;
+                }
+
+                if (str_contains($grade, 'MAX')) {
+                    $c_db = explode(" ", $grade);
+                    if ($c_db[0] >= $c) {
+                        $check = 1;
+                    } else {
+                        $check = 0;
+                    }
+                } else if (str_contains($grade, '-')) {
+                    $c_db = explode("-", $grade);
+                    if ($c_db[0] <= $c  && $c <= $c_db[1]) {
+                        $check = 1;
+                    } else {
+                        $check = 0;
+                    }
+                } else {
+                    $c_db = $grade;
+                    if ($c_db == $c) {
+                        $check = 1;
+                    } else {
+                        $check = 0;
+                    }
+                }
+            }
+            if ($check) {
+                array_push($subGradesList, $grades);
+            }
+        }
         return view('grades', compact('subGradesList'));
     }
 
