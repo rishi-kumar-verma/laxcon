@@ -1,0 +1,30 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Password Reset Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are the default lines which match reasons
+    | that are given by the password broker for a password update attempt
+    | has failed, such as for an invalid token or invalid new password.
+    |
+    */
+    'c' => 'Carbon',
+    'mn' => 'Manganese',
+    's' => 'Sulphur',
+    'p' => 'Phosphorus',
+    'si' => 'Sillicon',
+    'cr' => 'Chromium',
+    'ni' => 'Nickle',
+    'mo' => 'Molybdenum',
+    'co' => 'Co',
+    'v' => 'V',
+    'w' => 'W',
+    'ti' => 'Ti',
+    'ai' => 'Ai',
+    'cu' => 'Cu',
+    'fe' => 'Fe',
+];

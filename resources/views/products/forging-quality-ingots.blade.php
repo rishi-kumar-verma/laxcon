@@ -76,7 +76,7 @@
     </div>
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" class=" brand-logo ">Products</a>
+            <a id="logo-container" class=" brand-logo ">About Us</a>
 
             <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
 
@@ -165,108 +165,101 @@
         @endif
 
         <!--  SIDEBAR - END -->
-        <br><br>
         <div class="content-area">
-            <div class="container is-pagetitle">
-                <div class="row ui-mediabox portfolio  ">
 
 
-                    <div class="col s6 ">
-                        <a href="brightbar">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p1.jpg"> </a>
+            <div class="carousel carousel-fullscreen carousel-slider about_carousel ">
+                <a class="carousel-item" href="#about-slide-0!">
+                    <div class="bg" style="background-image: url('resources/assets/images/abouimage2.jpg')"></div>
 
-                    </div>
+                </a>
+                <a class="carousel-item" href="#about-slide-0!">
+                    <div class="bg" style="background-image: url('resources/assets/images/abb1.jpg')"></div>
 
+                </a>
+                <a class="carousel-item" href="#about-slide-1!">
+                    <div class="bg" style="background-image: url('resources/assets/images/abb2.jpg')"></div>
 
-                    <div class="col s6 ">
-                        <a href="precisionshaftabr">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p2.jpg"></a>
-                    </div>
+                </a>
+                <a class="carousel-item" href="#about-slide-2!">
+                    <div class="bg" style="background-image: url('resources/assets/images/ab1.jpg')"></div>
 
-
-                    <div class="col s6 ">
-                        <a href="duplexsteels">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p3.jpg"></a>
-                    </div>
-
-
-                    <div class="col s6 ">
-                        <a href="precipitation-hardening-steel">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p4.jpg"></a>
-                    </div>
+                </a>
+            </div>
 
 
-                    <div class="col s6 ">
-                        <a href="threadedbars">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p5.jpg"></a>
-                    </div>
+            <div class="container">
+                <div class="section">
 
+                    <p>"Laxcon Steels Limited" is a fully integrated steel mill and one of the leding producers of high-quality stailess steels and special steels equipped with top-touch
+                        equipment, such as mulitple electric furnaces, A.O.D. converters, ESR Continuous caster, vacuum degassing and vacuum oxygen decrburization systems.</p>
+                    <p>"An Extensive range of long products, including as it does Bright bars, Angles bars, Flat bars, Squares, Hexagons, Rolled bars, Forged bars, Round corner squares,
+                        Continuous cast billets and Ingots.</p>
+                    <p>"Laxcon can also supply special and customized grades as per customer's specific requirements with a heat size of 35 tons. Laxcon is perfectly equipped to offer a wide
+                        variety of grades with modified or varied chemical composition to customer specifications.</p>
+                    <p>"We are one of just a handfull of companies globally that can offer such a diverse product and size range.</p>
 
-                    <div class="col s6 ">
-                        <a href="hot-rolled-round-bars">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p6.jpg"></a>
-                    </div>
+                    <div class="center">
+                        <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query
 
-                    <div class="col s6 ">
-                        <a href="forged-proof-machined-bars">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p7.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="equal-angles">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p8.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="unequal-angles">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p9.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="flat-bars">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p10.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="cold-drawn-flat-bars">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p11.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="channels">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p12.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="hot-rolled-round-corner-squares">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p13.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="square-bright-bars">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p14.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="hexagonal-bright-bars">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p15.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="continuous-cast-billets-blooms">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p16.jpg"></a>
-                    </div>
-                    <div class="col s6 ">
-                        <a href="forging-quality-ingots">
-                            <img alt="image" class="z-depth-1" style="width: 100%;" src="resources/assets/images/p17.jpg"></a>
-                    </div>
+                            </button></a>
+                    </div><br>
+                    <div class="col s12">
+                        <a href="https://www.laxconsteels.com/wp-content/uploads/2022/07/Laxcon-Brochure_new.pdf" target="_blank"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Download Brochure
 
+                            </button></a>
 
+                    </div>
+                </div><br>
+                <div class="center">
+                    <a href="https://www.laxconsteels.com/forging-quality-ingots/" target="_blank"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">More Info
 
+                        </button></a>
                 </div>
 
-
-                <br><br><br><br>
-
+                <br>
+                <br>
+                <br>
             </div>
-        </div><!--.content-area-->
+        </div>
+    </div><!--.content-area-->
     </div>
 
     @include('footer')
 
     <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <script type="text/javascript">
+        $(document).ready(function() {
 
+            $(".carousel-fullscreen.carousel-slider").carousel({
+                fullWidth: true,
+                indicators: true,
+            }).css("height", $(window).height());
+            setTimeout(autoplay, 3500);
+
+            function autoplay() {
+                $(".carousel-fullscreen.carousel-slider").carousel("next");
+                setTimeout(autoplay, 3500);
+            }
+
+        });
+    </script>
+    <script src="resources/modules/fancybox/jquery.fancybox.min.js" type="text/javascript"></script>
+    <script type="text/javaScript">
+        $("[data-fancybox=images]").fancybox({
+            buttons : [ 
+                "slideShow",
+                "share",
+                "zoom",
+                "fullScreen",
+                "close",
+                "thumbs"
+            ],
+            thumbs : {
+                autoStart : false
+            }
+            });
+    </script>
 
 </body>
 

@@ -78,7 +78,7 @@
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" class=" brand-logo ">Grades</a>
+            <a id="logo-container" class="brand-logo ">Grades</a>
 
             <a href="" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
             <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
@@ -171,23 +171,22 @@
                     <div class="onehalffalf">
                         <h5 class="pagetitle">Grades</h5>
                     </div>
-                    <div class="halffalf"><a href="gardessearch" class="waves-effect waves-light btn btn-rounded blue-grey lighten-2">Search</a>
+                    <div class="halffalf">
+                        <a href="gardessearch" class="waves-effect waves-light btn btn-rounded blue-grey lighten-2">Search</a>
                     </div>
                 </div>
             </div>
+            @if($query)
+            <div class="container" style="clear:both">
+                <strong>{{$count}} grade(s)found for</strong>
+                <ul>
+                    @foreach ($query as $key=>$value)
+                    <li>{{ Config::get('constants.'.$key) }}({{$key}}%) = {{$value}}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <div class="container">
-                @if($query)
-                <div class="section">
-                    <div class="row">
-                        <div class="col s12 pad-0">
-                        <span>Query =></span>
-                            @foreach ($query as $key=>$value)
-                            <span><b> {{$key}}</b>= {{$value}} </span>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                @endif
                 <div class="section">
                     <div class="row ">
                         <div class="col s12 pad-0">
@@ -199,35 +198,35 @@
                                             <table class="responsive-table ">
                                                 <tbody>
                                                     <tr>
-                                                        <td>Carbon (C%)</td>
+                                                        <td>{{ Config::get('constants.c') }} (C%)</td>
                                                         <td>: {{$grade->c}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Sulphur(S%)</td>
+                                                        <td>{{ Config::get('constants.s') }}(S%)</td>
                                                         <td>: {{$grade->s}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Mangnese (Mn%)</td>
+                                                        <td>{{ Config::get('constants.mn') }} (Mn%)</td>
                                                         <td>: {{$grade->mn}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Phosphorosus (P%)</td>
+                                                        <td>{{ Config::get('constants.p') }} (P%)</td>
                                                         <td>: {{$grade->p}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Sillicon (Si%)</td>
+                                                        <td>{{ Config::get('constants.si') }} (Si%)</td>
                                                         <td>: {{$grade->si}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Crypton (Cr%)</td>
+                                                        <td>{{ Config::get('constants.cr') }} (Cr%)</td>
                                                         <td>: {{$grade->cr}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Nickle (Ni%)</td>
+                                                        <td>{{ Config::get('constants.ni') }} (Ni%)</td>
                                                         <td>: {{$grade->ni}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Moli (Mo%)</td>
+                                                        <td>{{ Config::get('constants.mo') }} (Mo%)</td>
                                                         <td>: {{$grade->mo}}</td>
                                                     </tr>
                                                     <tr>
@@ -248,7 +247,11 @@
             </div>
 
 
-
+            <div class="event__search__floater">
+                <div class="search__anchor">
+                    <a href="gardessearch"><i class="mdi mdi-table-search"></i></a>
+                </div>
+            </div>
 
 
         </div><!--.content-area-->

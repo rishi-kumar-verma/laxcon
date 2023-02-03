@@ -177,37 +177,37 @@
                     <form method="post" id="search-form-data" name="search-form-data" action="grades" enctype="multipart/form-data">
                         @csrf
                         <div class="input-field col s12">
-                            <input id="ni" type="number" step="any" class="validate" name="ni" placeholder="Nickle" value="">
-                            <label for="first_name1">Nickle(Ni%)</label>
+                            <input id="ni" type="number" step="any" class="validate" name="ni" placeholder="{{ Config::get('constants.ni') }}" value="">
+                            <label for="first_name1">{{ Config::get('constants.ni') }}(Ni%)</label>
                         </div>
 
                         <div class="input-field col s12">
-                            <input id="cr" type="number" step="any" class="validate" name="cr" placeholder="Chrome" value="">
-                            <label for="first_name1">Chrome(cr%)</label>
+                            <input id="cr" type="number" step="any" class="validate" name="cr" placeholder="{{ Config::get('constants.cr') }}" value="">
+                            <label for="first_name1">{{ Config::get('constants.cr') }}(cr%)</label>
                         </div>
 
                         <div class="input-field col s12">
-                            <input id="mo" type="number" step="any" class="validate" name="mo" placeholder="Moli" value="">
-                            <label for="first_name1">Moli(Mo%)</label>
+                            <input id="mo" type="number" step="any" class="validate" name="mo" placeholder="{{ Config::get('constants.mo') }}" value="">
+                            <label for="first_name1">{{ Config::get('constants.mo') }}(Mo%)</label>
                         </div>
 
                         <div class="input-field col s12">
-                            <input id="c" type="number" step="any" class="validate" name="c" placeholder="c" value="">
-                            <label for="first_name1">Carbon(C%) </label>
+                            <input id="c" type="number" step="any" class="validate" name="c" placeholder="{{ Config::get('constants.c') }}" value="">
+                            <label for="first_name1">{{ Config::get('constants.c') }}(C%) </label>
                         </div>
 
                         <div class="input-field col s12">
-                            <input id="s" type="number" step="any" class="validate" name="s" placeholder="Sulphur" value="">
-                            <label for="first_name1">Sulphur(S%)</label>
+                            <input id="s" type="number" step="any" class="validate" name="s" placeholder="{{ Config::get('constants.s') }}" value="">
+                            <label for="first_name1">{{ Config::get('constants.s') }}(S%)</label>
                         </div>
 
                         <div class="input-field col s12">
-                            <input id="p" type="number" step="any" class="validate" name="p" placeholder="Phosphorous" value="">
-                            <label for="first_name1">Phosphorous(P%)</label>
+                            <input id="p" type="number" step="any" class="validate" name="p" placeholder="{{ Config::get('constants.p') }}" value="">
+                            <label for="first_name1">{{ Config::get('constants.p') }}(P%)</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="si" type="number" step="any" class="validate" name="si" placeholder="Silicon" value="">
-                            <label for="first_name1">Silicon(Si%)</label>
+                            <input id="si" type="number" step="any" class="validate" name="si" placeholder="{{ Config::get('constants.si') }}" value="">
+                            <label for="first_name1">{{ Config::get('constants.si') }}(Si%)</label>
                         </div>
 
                         <div class="center">

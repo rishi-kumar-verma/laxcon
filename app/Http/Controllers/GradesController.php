@@ -95,7 +95,8 @@ class GradesController extends Controller
                 array_push($subGradesList, $grades);
             }
         }
-        return view('grades', compact(['subGradesList', 'query']));
+        $count = count($subGradesList);
+        return view('grades', compact(['subGradesList', 'query', 'count']));
     }
 
     /**
