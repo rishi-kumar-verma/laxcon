@@ -51,9 +51,10 @@ class GradesController extends Controller
                 $query[$key] = $all;
             }
         }
-        $subGradesList = [];
-        $gradesList = SubGrades::where('status', 1)->get();
-        foreach ($gradesList as $grades) {
+        $gradesList = [];
+        $gradesListDB = SubGrades::where('status', 1)->get();
+        $firstGradesList = $this->firstList($gradesListDB, $request);
+        foreach ($gradesListDB as $grades) {
             $check = 0;
             $arr = json_decode($grades);
             foreach ($arr as $key=>$grade) {
@@ -81,7 +82,67 @@ class GradesController extends Controller
                     }
                 } else if (str_contains($grade, '-')) {
                     $c_db = explode("-", $grade);
-                    if ($c_db[0] <= $c  && $c <= $c_db[1]) {
+                    if ($c_db[0] < $c  && $c <= $c_db[1]) {
+                        $check = $check + 1;
+                    }
+                } else {
+                    $c_db = $grade;
+                    if ($c_db == $c) {
+                        $check = $check + 1;
+                    }
+                }
+            }
+            if ($check === ($count - 1)) {
+                array_push($gradesList, $grades);
+            }
+        }
+        $subGradesList = [...$firstGradesList, ...$gradesList];
+        $count = count($subGradesList);
+        return view('grades', compact(['subGradesList', 'query', 'count']));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function firstList($gradesList, $request)
+    {
+        $count = 0;
+        $query = [];
+        foreach($request->all() as $key=>$all) {
+            if ($all) {
+                $count = $count + 1;
+            }
+            if($key != '_token' && $all){
+                $query[$key] = $all;
+            }
+        }
+        $subGradesList = [];
+        foreach ($gradesList as $grades) {
+            $check = 0;
+            $arr = json_decode($grades);
+            foreach ($arr as $key=>$grade) {
+                if ($key == 'ni' && $request->ni) {
+                    $c = $request->ni;
+                } else if ($key == 'cr' && $request->cr) {
+                    $c = $request->cr;
+                } else if ($key == 'mo' && $request->mo) {
+                    $c = $request->mo;
+                } else if ($key == 'c' && $request->c) {
+                    $c = $request->c;
+                } else if ($key == 's' && $request->s) {
+                    $c = $request->s;
+                } else if ($key == 'p' && $request->p) {
+                    $c = $request->p;
+                } else if ($key == 'si' && $request->si) {
+                    $c = $request->si;
+                } else {
+                    continue;
+                }
+                if (str_contains($grade, '-')) {
+                    $c_db = explode("-", $grade);
+                    if ($c_db[0] == $c) {
                         $check = $check + 1;
                     }
                 } else {
@@ -95,8 +156,7 @@ class GradesController extends Controller
                 array_push($subGradesList, $grades);
             }
         }
-        $count = count($subGradesList);
-        return view('grades', compact(['subGradesList', 'query', 'count']));
+        return $subGradesList;
     }
 
     /**
