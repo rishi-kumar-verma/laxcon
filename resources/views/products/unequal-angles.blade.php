@@ -76,7 +76,7 @@
     </div>
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" class=" brand-logo ">About Us</a>
+            <a id="logo-container" class=" brand-logo ">Unequal Angles</a>
 
             <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
 
@@ -166,38 +166,12 @@
 
         <!--  SIDEBAR - END -->
         <div class="content-area">
-
-
-            <div class="carousel carousel-fullscreen carousel-slider about_carousel ">
-                <a class="carousel-item" href="#about-slide-0!">
-                    <div class="bg" style="background-image: url('resources/assets/images/abouimage2.jpg')"></div>
-
-                </a>
-                <a class="carousel-item" href="#about-slide-0!">
-                    <div class="bg" style="background-image: url('resources/assets/images/abb1.jpg')"></div>
-
-                </a>
-                <a class="carousel-item" href="#about-slide-1!">
-                    <div class="bg" style="background-image: url('resources/assets/images/abb2.jpg')"></div>
-
-                </a>
-                <a class="carousel-item" href="#about-slide-2!">
-                    <div class="bg" style="background-image: url('resources/assets/images/ab1.jpg')"></div>
-
-                </a>
-            </div>
-
-
-            <div class="container">
+            <div class="container  is-pagetitle">
                 <div class="section">
 
-                    <p>"Laxcon Steels Limited" is a fully integrated steel mill and one of the leding producers of high-quality stailess steels and special steels equipped with top-touch
-                        equipment, such as mulitple electric furnaces, A.O.D. converters, ESR Continuous caster, vacuum degassing and vacuum oxygen decrburization systems.</p>
-                    <p>"An Extensive range of long products, including as it does Bright bars, Angles bars, Flat bars, Squares, Hexagons, Rolled bars, Forged bars, Round corner squares,
-                        Continuous cast billets and Ingots.</p>
-                    <p>"Laxcon can also supply special and customized grades as per customer's specific requirements with a heat size of 35 tons. Laxcon is perfectly equipped to offer a wide
-                        variety of grades with modified or varied chemical composition to customer specifications.</p>
-                    <p>"We are one of just a handfull of companies globally that can offer such a diverse product and size range.</p>
+
+                    <img alt="image" style="width: 100%;" src="resources/assets/images/unequaLangle.jpg">
+                    <p>Unequal angle has a different side length that can be seen with naked eyes. They are used in automobile as well as the construction field where unequal support is needed frequently.</p>
 
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query
@@ -210,10 +184,13 @@
                             </button></a>
 
                     </div>
+                    <br>
+                    <div class="center">
+                        <a href="https://www.laxconsteels.com/unequal-angles/" target="_blank"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">More Info
 
-                    <br>
-                    <br>
-                    <br>
+                            </button></a>
+                    </div><br>
+                    <br><br><br><br>
                 </div>
             </div>
         </div><!--.content-area-->
@@ -222,39 +199,6 @@
     @include('footer')
 
     <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            $(".carousel-fullscreen.carousel-slider").carousel({
-                fullWidth: true,
-                indicators: true,
-            }).css("height", $(window).height());
-            setTimeout(autoplay, 3500);
-
-            function autoplay() {
-                $(".carousel-fullscreen.carousel-slider").carousel("next");
-                setTimeout(autoplay, 3500);
-            }
-
-        });
-    </script>
-    <script src="resources/modules/fancybox/jquery.fancybox.min.js" type="text/javascript"></script>
-    <script type="text/javaScript">
-        $("[data-fancybox=images]").fancybox({
-            buttons : [ 
-                "slideShow",
-                "share",
-                "zoom",
-                "fullScreen",
-                "close",
-                "thumbs"
-            ],
-            thumbs : {
-                autoStart : false
-            }
-            });
-    </script>
-
 </body>
 
 </html>

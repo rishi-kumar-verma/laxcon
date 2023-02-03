@@ -76,7 +76,7 @@
     </div>
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" class=" brand-logo ">About Us</a>
+            <a id="logo-container" class=" brand-logo ">Contact Us</a>
 
             <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
 
