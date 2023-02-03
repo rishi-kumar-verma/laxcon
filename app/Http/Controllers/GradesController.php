@@ -28,8 +28,9 @@ class GradesController extends Controller
      */
     public function subGradList()
     {
+        $query = [];
         $subGradesList = SubGrades::where('status', 1)->get();
-        return view('grades', compact('subGradesList'));
+        return view('grades', compact(['subGradesList', 'query']));
     }
 
     /**
@@ -40,33 +41,27 @@ class GradesController extends Controller
     public function filterSubGradList(StoreGradesRequest $request)
     {
 
-        // $ni = ['ni', '=', $request->ni];
-        // $cr = ['cr', '=', $request->cr];
-        // $mo = ['mo', '=', $request->mo];
-        // $c = ['c', '=', $request->c];
-        // $s = ['s', '=', $request->s];
-        // $p = ['p', '=', $request->p];
-        // $si = ['si', '=', $request->si];
-        // $ni = $request->ni;
-        // $cr = $request->cr;
-        // $mo = $request->mo;
-        // $c = $request->c;
-        // $s = $request->s;
-        // $p = $request->p;
-        // $si = $request->si;
+        $count = 0;
+        $query = [];
+        foreach($request->all() as $key=>$all) {
+            if ($all) {
+                $count = $count + 1;
+            }
+            if($key != '_token' && $all){
+                $query[$key] = $all;
+            }
+        }
         $subGradesList = [];
         $gradesList = SubGrades::where('status', 1)->get();
         foreach ($gradesList as $grades) {
             $check = 0;
             $arr = json_decode($grades);
             foreach ($arr as $key=>$grade) {
-
-                if ($key == 'ni') {
+                if ($key == 'ni' && $request->ni) {
                     $c = $request->ni;
                 } else if ($key == 'cr' && $request->cr) {
                     $c = $request->cr;
-                } else 
-                if ($key == 'mo' && $request->mo) {
+                } else if ($key == 'mo' && $request->mo) {
                     $c = $request->mo;
                 } else if ($key == 'c' && $request->c) {
                     $c = $request->c;
@@ -79,35 +74,28 @@ class GradesController extends Controller
                 } else {
                     continue;
                 }
-
-                if (str_contains($grade, 'MAX')) {
+                if (str_contains($grade, 'MAX') || str_contains($grade, 'Max')) {
                     $c_db = explode(" ", $grade);
                     if ($c_db[0] >= $c) {
-                        $check = 1;
-                    } else {
-                        $check = 0;
+                        $check = $check + 1;
                     }
                 } else if (str_contains($grade, '-')) {
                     $c_db = explode("-", $grade);
                     if ($c_db[0] <= $c  && $c <= $c_db[1]) {
-                        $check = 1;
-                    } else {
-                        $check = 0;
+                        $check = $check + 1;
                     }
                 } else {
                     $c_db = $grade;
                     if ($c_db == $c) {
-                        $check = 1;
-                    } else {
-                        $check = 0;
+                        $check = $check + 1;
                     }
                 }
             }
-            if ($check) {
+            if ($check === ($count - 1)) {
                 array_push($subGradesList, $grades);
             }
         }
-        return view('grades', compact('subGradesList'));
+        return view('grades', compact(['subGradesList', 'query']));
     }
 
     /**

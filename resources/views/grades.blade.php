@@ -176,6 +176,18 @@
                 </div>
             </div>
             <div class="container">
+                @if($query)
+                <div class="section">
+                    <div class="row">
+                        <div class="col s12 pad-0">
+                        <span>Query =></span>
+                            @foreach ($query as $key=>$value)
+                            <span><b> {{$key}}</b>= {{$value}} </span>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                @endif
                 <div class="section">
                     <div class="row ">
                         <div class="col s12 pad-0">
@@ -207,7 +219,7 @@
                                                         <td>: {{$grade->si}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Carbon (Cr%)</td>
+                                                        <td>Crypton (Cr%)</td>
                                                         <td>: {{$grade->cr}}</td>
                                                     </tr>
                                                     <tr>

@@ -207,7 +207,7 @@
                         </div>
                         <div class="input-field col s12">
                             <input id="si" type="number" step="any" class="validate" name="si" placeholder="Silicon" value="">
-                            <label for="first_name1">Silicon(S%)</label>
+                            <label for="first_name1">Silicon(Si%)</label>
                         </div>
 
                         <div class="center">
