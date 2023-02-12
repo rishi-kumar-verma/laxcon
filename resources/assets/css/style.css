@@ -293,3 +293,7 @@ table>tbody>tr td:nth-child(2) {
     color: #e53935;
     box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 20%);
 }
+
+select {
+    display: unset !important;
+}

@@ -18,6 +18,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/sendaquery', function () {
+    return view('sendaquery');
+});
+
 // Route::get('grades', 'GradeController@index');
 Route::get('grades',[GradesController::class,'subGradList']);
 Route::get('/gardessearch', function () {
@@ -86,13 +99,5 @@ Route::get('/forging-quality-ingots', function () {
 });
 
 
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
-Route::get('/sendaquery', function () {
-    return view('sendaquery');
-});
+
 
