@@ -76,77 +76,84 @@
     </div>
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="index.html" class=" brand-logo "><img src="resources/assets/images/logo.png"></a>
+            <a id="logo-container" href="" class=" brand-logo "><img src="resources/assets/images/logo.png"></a>
         </div>
     </nav>
 
     <!-- END navigation -->
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-            <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-            @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-            @endif
-            @endauth
-        </div>
-        @endif
-
         <!--  SIDEBAR - END -->
         <div class="content-area">
 
             <div class="container  is-pagetitle">
+                <div class="section" style="width:65%">
+                    @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>{{ $message }}</strong>
+                    </div>
+                    @endif
+                </div>
                 <div class="section">
                     <h6 class="pagetitle">Send a Query</h6>
-
-                    <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">First </label>
-                    </div>
-
-                    <div class="input-field col s12">
-                        <input id="phoneno" type="text" class="validate">
-                        <label for="phoneno">Phone no </label>
-                    </div>
-                    <div class="input-field col s12">
-                        <input id="email3" type="email" class="validate">
-                        <label for="email3">Email</label>
-                        <span class="helper-text" data-error="Incorrect Email" data-success="Correct Email">Please enter your email here</span>
-                    </div>
-
-                    <div class="input-field col s12">
-                        <input id="country" type="text" class="validate">
-                        <label for="country">Country</label>
-                    </div>
-                    <div class="section ui-select">
+                    <form method="post" action="{{url('sendemail')}}">
+                        {{ csrf_field() }}
                         <div class="input-field col s12">
-                            <select multiple>
-                                <option value="1" selected>Select</option>
-                                <option value="1">Forging Quality Ingots</option>
-                                <option value="2">Continuous Cast Blooms / Billets</option>
-                                <option value="3">Round Bars (hot rolled)</option>
-                                <option value="4">Round Corner Square (hot rolled)</option>
-                                <option value="5">Flat Bars (HRAP & Cold Drawn)</option>
-                                <option value="6">Equal & Un-Equal Angles Bars</option>
-                                <option value="7">Bright Bars (round / hex / square)</option>
-                                <option value="8">Others</option>
-                            </select>
+                            <input id="first_name1" name="name" type="text" class="validate">
+                            <label for="first_name1">First </label>
                         </div>
-                    </div>
 
-                    <div class="input-field col s12">
-                        <textarea id="textarea-normal" class="materialize-textarea validate"></textarea>
-                        <label for="textarea-normal">Text area</label>
-                    </div>
-                    <div class="center">
-                        <a href="sendaquery.html"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send
+                        <div class="input-field col s12">
+                            <input id="phoneno" type="text" class="validate">
+                            <label for="phoneno">Phone no </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="email" name="email" type="email" class="validate">
+                            <label for="email3">Email</label>
+                            <span class="helper-text" data-error="Incorrect Email" data-success="Correct Email">Please enter your email here</span>
+                        </div>
 
-                            </button></a>
-                    </div>
+                        <div class="input-field col s12">
+                            <input id="country" type="text" class="validate">
+                            <label for="country">Country</label>
+                        </div>
+                        <div class="section ui-select">
+                            <div class="input-field col s12">
+                                <select multiple>
+                                    <option value="1" selected>Select</option>
+                                    <option value="1">Forging Quality Ingots</option>
+                                    <option value="2">Continuous Cast Blooms / Billets</option>
+                                    <option value="3">Round Bars (hot rolled)</option>
+                                    <option value="4">Round Corner Square (hot rolled)</option>
+                                    <option value="5">Flat Bars (HRAP & Cold Drawn)</option>
+                                    <option value="6">Equal & Un-Equal Angles Bars</option>
+                                    <option value="7">Bright Bars (round / hex / square)</option>
+                                    <option value="8">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <textarea id="textarea-normal" name="message" class="materialize-textarea validate"></textarea>
+                            <label for="textarea-normal">Text area</label>
+                        </div>
+                        <div class="center">
+
+                            <button type="submit" name="send" class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send
+                            </button>
+
+                        </div>
+                    </form>
                 </div>
                 <br><br>
 

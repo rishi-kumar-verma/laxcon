@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GradesController;
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,8 +31,8 @@ Route::get('/contact', function () {
 Route::get('/sendaquery', function () {
     return view('sendaquery');
 });
+Route::post('/sendemail', [EmailController::class,'send']);
 
-// Route::get('grades', 'GradeController@index');
 Route::get('grades',[GradesController::class,'subGradList']);
 Route::get('/gardessearch', function () {
     return view('gardessearch');
