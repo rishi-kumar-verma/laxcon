@@ -43,13 +43,18 @@ class GradesController extends Controller
 
         $count = 0;
         $query = [];
-        foreach($request->all() as $key=>$all) {
+        foreach ($request->all() as $key => $all) {
             if ($all) {
                 $count = $count + 1;
             }
-            if($key != '_token' && $all){
+            if ($key != '_token' && $all) {
                 $query[$key] = $all;
             }
+        }
+        if ($request->subgradeName) {
+            $subGradesList = SubGrades::where('subgradeName', $request->subgradeName)->get();
+            $count = count($subGradesList);
+            return view('grades', compact(['subGradesList', 'query', 'count']));
         }
         $gradesList = [];
         $gradesListDB = SubGrades::where('status', 1)->get();
@@ -57,7 +62,7 @@ class GradesController extends Controller
         foreach ($gradesListDB as $grades) {
             $check = 0;
             $arr = json_decode($grades);
-            foreach ($arr as $key=>$grade) {
+            foreach ($arr as $key => $grade) {
                 if ($key == 'ni' && $request->ni) {
                     $c = $request->ni;
                 } else if ($key == 'cr' && $request->cr) {
@@ -110,11 +115,11 @@ class GradesController extends Controller
     {
         $count = 0;
         $query = [];
-        foreach($request->all() as $key=>$all) {
+        foreach ($request->all() as $key => $all) {
             if ($all) {
                 $count = $count + 1;
             }
-            if($key != '_token' && $all){
+            if ($key != '_token' && $all) {
                 $query[$key] = $all;
             }
         }
@@ -122,7 +127,7 @@ class GradesController extends Controller
         foreach ($gradesList as $grades) {
             $check = 0;
             $arr = json_decode($grades);
-            foreach ($arr as $key=>$grade) {
+            foreach ($arr as $key => $grade) {
                 if ($key == 'ni' && $request->ni) {
                     $c = $request->ni;
                 } else if ($key == 'cr' && $request->cr) {

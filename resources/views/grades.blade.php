@@ -208,12 +208,36 @@
                                                         <td>: {{$grade->cr}}</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>{{ Config::get('constants.co') }} (Co%)</td>
+                                                        <td>: {{$grade->co}}</td>
+                                                    </tr>
+                                                    <tr>
                                                         <td>{{ Config::get('constants.ni') }} (Ni%)</td>
                                                         <td>: {{$grade->ni}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>{{ Config::get('constants.mo') }} (Mo%)</td>
                                                         <td>: {{$grade->mo}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{ Config::get('constants.w') }} (W%)</td>
+                                                        <td>: {{$grade->w}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{ Config::get('constants.ti') }} (Ti%)</td>
+                                                        <td>: {{$grade->ti}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{ Config::get('constants.ai') }} (AI%)</td>
+                                                        <td>: {{$grade->ai}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{ Config::get('constants.cu') }} (Cu%)</td>
+                                                        <td>: {{$grade->cu}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{ Config::get('constants.fe') }} (Fe%)</td>
+                                                        <td>: {{$grade->fe}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Other Elements</td>

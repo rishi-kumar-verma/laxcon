@@ -162,6 +162,11 @@
                     <h6 class="pagetitle">Enter Material Value</h6>
                     <form method="post" id="search-form-data" name="search-form-data" action="grades" enctype="multipart/form-data">
                         @csrf
+
+                        <div class="input-field col s12">
+                            <input id="subgradeName" type="text" class="validate" name="subgradeName" placeholder="Grade Name" value="">
+                            <label for="first_name1">Grade Name</label>
+                        </div>
                         <div class="input-field col s12">
                             <input id="ni" type="number" step="any" class="validate" name="ni" placeholder="{{ Config::get('constants.ni') }}" value="">
                             <label for="first_name1">{{ Config::get('constants.ni') }}(Ni%)</label>
