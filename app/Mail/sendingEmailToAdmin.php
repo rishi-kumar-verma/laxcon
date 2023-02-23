@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class sendingEmail extends Mailable
+class sendingEmailToAdmin extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -33,8 +33,8 @@ class sendingEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Query Email')
-            ->view('emailsend')
+        return $this->subject('Query Email from Visitor')
+            ->view('emailsendtoadmin')
             ->with('emails', $this->emails);
     }
 
@@ -46,7 +46,7 @@ class sendingEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Query Email',
+            subject: 'Query Email from Visitor',
         );
     }
 

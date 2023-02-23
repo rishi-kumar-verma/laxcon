@@ -110,11 +110,11 @@
                         {{ csrf_field() }}
                         <div class="input-field col s12">
                             <input id="first_name1" name="name" type="text" class="validate">
-                            <label for="first_name1">First </label>
+                            <label for="first_name1">Name </label>
                         </div>
 
                         <div class="input-field col s12">
-                            <input id="phoneno" type="text" class="validate">
+                            <input id="phoneno" name="phone" type="text" class="validate">
                             <label for="phoneno">Phone no </label>
                         </div>
                         <div class="input-field col s12">
@@ -124,22 +124,22 @@
                         </div>
 
                         <div class="input-field col s12">
-                            <input id="country" type="text" class="validate">
+                            <input id="country" name="country" type="text" class="validate">
                             <label for="country">Country</label>
                         </div>
                         <div class="section ui-select">
                             <div class="input-field col s12">
-                                <select multiple>
-                                    <option value="1" selected>Select</option>
-                                    <option value="1">Forging Quality Ingots</option>
-                                    <option value="2">Continuous Cast Blooms / Billets</option>
-                                    <option value="3">Round Bars (hot rolled)</option>
-                                    <option value="4">Round Corner Square (hot rolled)</option>
-                                    <option value="5">Flat Bars (HRAP & Cold Drawn)</option>
-                                    <option value="6">Equal & Un-Equal Angles Bars</option>
-                                    <option value="7">Bright Bars (round / hex / square)</option>
-                                    <option value="8">Others</option>
+                                <select name="material" multiple style="display: none!important;">
+                                    <option value="Forging Quality Ingots">Forging Quality Ingots</option>
+                                    <option value="Continuous Cast Blooms / Billets">Continuous Cast Blooms / Billets</option>
+                                    <option value="Round Bars (hot rolled)">Round Bars (hot rolled)</option>
+                                    <option value="Round Corner Square (hot rolled)">Round Corner Square (hot rolled)</option>
+                                    <option value="lat Bars (HRAP & Cold Drawn)">Flat Bars (HRAP & Cold Drawn)</option>
+                                    <option value="Equal & Un-Equal Angles Bars">Equal & Un-Equal Angles Bars</option>
+                                    <option value="Bright Bars (round / hex / square)">Bright Bars (round / hex / square)</option>
+                                    <option value="Others">Others</option>
                                 </select>
+                                <label>Choose your option</label>
                             </div>
                         </div>
 
@@ -165,7 +165,11 @@
     @include('footer')
 
     <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
-
+    <script>
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+    </script>
 </body>
 
 </html>

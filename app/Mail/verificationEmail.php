@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class sendingEmail extends Mailable
+class verificationEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -20,6 +20,7 @@ class sendingEmail extends Mailable
      */
 
     public $emails;
+    public $token;
 
     public function __construct($emails)
     {
@@ -33,8 +34,8 @@ class sendingEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Query Email')
-            ->view('emailsend')
+        return $this->subject('Vefification Email From Laxcon')
+            ->view('verify')
             ->with('emails', $this->emails);
     }
 
@@ -46,7 +47,7 @@ class sendingEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Query Email',
+            subject: 'Vefification Email From Laxcon',
         );
     }
 

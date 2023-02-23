@@ -14,20 +14,19 @@ css/bootstrap.min.css">
     <br />
     <h3 align="center">Query Email From Laxcon</h3><br />
     <div class="container">
-        Hi {{ $emails['name']}},
+        Hi Admin,
         <br />
-        Thank you for reaching out.
-        <br />
-        <br />
-        We appreciate your patience, and will be happy to solve this issue for you. <br />
-        I'd gladly respond to any question through email or we can schedule a call for you. <br />
-        Let me know what works best for you. If you prefer to solve your issue through email, please provide me with more information,<br />
-        it will help me better understand and find the best way to move forward with your request.<br />
+        We got a query from visitor!
         <br />
         <br />
-        If you didn't try to contact, please please ignore this email. <br />
-        Regards, <br />
-
+        <b>Name:</b> {{ $emails['name']}}<br />
+        <b>Phone:</b>{{ $emails['phone']}}<br />
+        <b>Email:</b>{{ $emails['email']}}<br />
+        <b>Country:</b>{{ $emails['country']}}<br />
+        <b>Shapes:</b>{{ $emails['material']}}<br />
+        <b>Message:</b>{{ $emails['message']}}<br />
+        <br />
+        <br />
         <a href="www.laxconsteels.com">Laxcon Steels Limiated</a>
         <br />
         <br />

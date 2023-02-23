@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GradesController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [UserController::class,'index']);
+Route::post('/user-login', [UserController::class,'login']);
+Route::get('/verificationemail/{token}', [UserController::class,'verificationSuccess']);
+Route::post('/sendemail', [EmailController::class,'send']);
+
+Auth::routes();
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -31,7 +36,6 @@ Route::get('/contact', function () {
 Route::get('/sendaquery', function () {
     return view('sendaquery');
 });
-Route::post('/sendemail', [EmailController::class,'send']);
 
 Route::get('grades',[GradesController::class,'subGradList']);
 Route::get('/gardessearch', function () {
@@ -98,7 +102,4 @@ Route::get('/continuous-cast-billets-blooms', function () {
 Route::get('/forging-quality-ingots', function () {
     return view('products.forging-quality-ingots');
 });
-
-
-
 

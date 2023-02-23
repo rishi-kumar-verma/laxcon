@@ -42,7 +42,7 @@
 <script src="resources/assets/js/variables.js"></script>
 <!-- CORE JS FRAMEWORK - END -->
 
-<script src="resources/assets/js/common.js"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
 
 
 <!-- CORE TEMPLATE JS - START -->

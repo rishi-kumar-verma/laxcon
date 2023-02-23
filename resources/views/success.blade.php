@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <!-- <meta charset="utf-8"> -->
+    <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Laxcon </title>
@@ -55,95 +55,90 @@
     <link href="resources/assets/css/style.css" type="text/css" rel="stylesheet" media="screen" id="main-style" />
     <!-- CORE CSS TEMPLATE - END -->
     <!-- Styles -->
+    <style>
 
+    </style>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
 </head>
-<nav class="fixedtop topbar navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="" class="brand-logo logo-margin"><img src="resources/assets/images/logo.png"></a>
-    </div>
-</nav>
 
-<body class="html" data-header="light" data-footer="light" data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
+<body class=" isfullscreen  html" data-header="light" data-footer="light" data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
     <div class="preloader-background">
         <div class="preloader-wrapper">
             <div id="preloader"></div>
         </div>
     </div>
-
-
-
-    <!-- SIDEBAR - START -->
-
-    <!-- MAIN MENU - START -->
-
-
-
-    <!-- MAIN MENU - END -->
-
-
-
-    <!--  SIDEBAR - END -->
-    <!-- SIDEBAR - START -->
-
-    <!-- MAIN MENU - START -->
-
-
-
-    <!-- MAIN MENU - END -->
-
-
-
     <!--  SIDEBAR - END -->
     <div class="content-area">
-        <div class="container">
-            <div class="section">
+        <h1 class="white-text center welcome-logo index-welcome"><a href=""><img src="resources/assets/images/logo.png"></a></h1>
+        <div class="fullfixed index-carousel">
 
-                <br><br>
+            <div class="carousel carousel-fullscreen carousel-slider">
 
-                <h6 class="pagetitle">GET STARTED</h6>
-                <div class="input-field col s12 ">
-                    <form method="POST" action="user-login">
-                        @csrf
+                <a class="carousel-item" href="#carousel-slide-0!">
+                    <div class="bg" style="background-image: url('resources/assets/images/three.jpg')"></div>
+                    <div class="item-content center-align white-text">
 
-                        <div class="mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Enter Your Email') }}</label>
+                        <div class="spacer-xlarge"></div>
+                        <div class="spacer-xlarge"></div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                <input id="password" type="hidden" class="form-control" name="password" value="123456" required autocomplete="email" autofocus>
-                                <span class="helper-text" data-error="Incorrect Email" data-success="Correct Email" style="color:#000;">We will send you a verification link</span>
+                        <h5 class="light white-text">Today, it has covered a respectable distance in terms of its annual output and reputation that resonates</h5>
 
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="mb-0">
-                            <div class="center col-md-6 offset-md-4">
+                </a>
+                <a class="carousel-item" href="#carousel-slide-1!">
+                    <div class="bg" style="background-image: url('resources/assets/images/two.jpg')"></div>
+                    <div class="item-content center-align white-text">
 
-                                <button type="submit" class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">
-                                    {{ __('Login') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        <div class="spacer-xlarge"></div>
+                        <div class="spacer-xlarge"></div>
 
-                </div>
+                        <h5 class="light white-text">To give its customers a plethora of choices when it comes to special steel.</h5>
 
+                    </div>
+
+                </a>
+                <a class="carousel-item" href="#carousel-slide-2!">
+                    <div class="bg" style="background-image: url('resources/assets/images/one.jpg')"></div>
+                    <div class="item-content center-align white-text">
+
+                        <div class="spacer-xlarge"></div>
+                        <div class="spacer-xlarge"></div>
+
+                        <h5 class="light white-text">Laxcon Steels vision has always been to reign supreme on the parameter of quality and choice. </h5>
+
+                    </div>
+
+                </a>
+                <a class="carousel-item" href="#carousel-slide-3!">
+                    <div class="bg" style="background-image: url('resources/assets/images/four.jpg')"></div>
+                    <div class="item-content center-align white-text">
+
+                        <div class="spacer-xlarge"></div>
+                        <div class="spacer-xlarge"></div>
+
+                        <h5 class="light white-text">Making steel is a fine art that comes when experience is mixed with knowledge and powered by the right tools.</h5>
+
+                    </div>
+
+                </a>
             </div>
+
         </div>
-    </div>
+
+        <div class="center index-start">
+            <a href="login1" class='waves-light btn-large red darken-1 tooltipped col s2'> Get Started
+            </a>
+        </div>
+    </div><!--.content-area-->
 
 
 
-
-
-
-
-    <!--.content-area-->
 
 
     <script src="resources/assets/js/pwa.js"></script>
@@ -170,6 +165,24 @@
 
 
     <script src="resources/assets/js/preloader.js"></script>
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".carousel-fullscreen.carousel-slider").carousel({
+                fullWidth: true,
+                indicators: true,
+            }).css("height", $(window).height());
+            setTimeout(autoplay, 3500);
+
+            function autoplay() {
+                $(".carousel-fullscreen.carousel-slider").carousel("next");
+                setTimeout(autoplay, 3500);
+            }
+
+        });
+    </script>
 
 </body>
 
