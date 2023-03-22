@@ -81,40 +81,38 @@ function CalculateWeight() {
 
     Param[0] = UnitConvertI(Param[0], Units[0]);
     Param[1] = UnitConvertI(Param[1], Units[1]);
-    Param[2] = UnitConvertF(Param[2], Units[2]);
+    Param[2] = UnitConvertI(Param[2], Units[2]);
 
     FormType = document.forms['calculator'].shape.value;
     Convert = 1;
     if (FormType == "Round") {
-        console.log(FormType, Param[0], Param[1], Param[2], Param[3]);
         Result = new String(2.6729 * Param[0] * Param[0] * Convert * Param[2] * Param[3]);
-        document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
+        // document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
         document.forms['calculator'].result2.value = Result.substring(0, Result.indexOf(".") + RoundOff) * 0.4535;
     }
     if (FormType == "Square") {
         Result = new String(3.4032 * Param[0] * Param[0] * Convert * Param[2] * Param[3]);
-        document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
+        // document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
         document.forms['calculator'].result2.value = Result.substring(0, Result.indexOf(".") + RoundOff) * 0.4535;
     }
     if (FormType == "Hexagonal") {
         Result = new String(2.9473 * Param[0] * Param[0] * Convert * Param[2] * Param[3]);
-        document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
+        // document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
         document.forms['calculator'].result2.value = Result.substring(0, Result.indexOf(".") + RoundOff) * 0.4535;
     }
     if (FormType == "Octagonal") {
         Result = new String(2.8193 * Param[0] * Param[0] * Convert * Param[2] * Param[3]);
-        document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
+        // document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
         document.forms['calculator'].result2.value = Result.substring(0, Result.indexOf(".") + RoundOff) * 0.4535;
     }
     if (FormType == "Flat/Rectangle") {
         Result = new String(3.4032 * Param[0] * Convert * Param[1] * Param[2] * Param[3]);
-        document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
+        // document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
         document.forms['calculator'].result2.value = Result.substring(0, Result.indexOf(".") + RoundOff) * 0.4535;
     }
     if (FormType == "Equal Angle") {
-        Result = new String(3.4032 * Param[0] * Convert * Param[1] * Param[2] * Param[3]);
-        document.forms['calculator'].result.value = Result.substring(0, Result.indexOf(".") + RoundOff);
-        document.forms['calculator'].result2.value = Result.substring(0, Result.indexOf(".") + RoundOff) * 0.4535;
+        var Result1 = (((Number(Param[1]) + Number(Param[2])) - Number(Param[0]))* Number(Param[0]))*(0.00785);
+        document.forms['calculator'].result2.value = Result1;
     }
 
 }

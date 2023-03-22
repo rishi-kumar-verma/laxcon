@@ -239,6 +239,10 @@
                                                         <td>{{ Config::get('constants.fe') }} (Fe%)</td>
                                                         <td>: {{$grade->fe}}</td>
                                                     </tr>
+                                                     <tr>
+                                                        <td>{{ Config::get('constants.v') }} (V%)</td>
+                                                        <td>: {{$grade->v}}</td>
+                                                    </tr>
                                                     <tr>
                                                         <td>Other Elements</td>
                                                         <td>: {{$grade->otherelement}}</td>

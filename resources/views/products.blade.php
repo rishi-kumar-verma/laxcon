@@ -151,9 +151,11 @@
     </ul>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <!--  SIDEBAR - END -->
-        <br><br>
+        <br>
         <div class="content-area">
             <div class="container is-pagetitle">
+                <h6>Our integrated manufacturing edge gives us the ability to produce steel in a variety of finishes, surface options and profiles. Our bright bars and precision shaft bars are reputed for their quality and metallurgy. Our ingots and RCS are popular among processors who use it for further machining .</h6>
+<br>
                 <div class="row ui-mediabox portfolio  ">
 
 

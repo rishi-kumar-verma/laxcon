@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 24, 2023 at 11:22 AM
+-- Generation Time: Feb 23, 2023 at 08:49 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -106,6 +106,13 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   `created_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('rishianand00001@gmail.com', '$2y$10$vPXHBIsARJ/HiX7U38yOmu7GiXnx53BPYqr/NQY3rKuTqNEGmAzSi', '2023-02-20 03:20:06');
 
 -- --------------------------------------------------------
 
@@ -588,7 +595,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'rishi', 'rishianand00001@gmail.com', '2023-02-21 04:33:49', '$2y$10$wRBaEV4om/uj9cV.MgcYdeLvFO439QVDFMt/CNtzbRvVrZAf4X/YK', 'cRvGNZzkMqecdPsAv3MSCKVqUjdby10DMCdCMXomggAxKj4a4w2j9Mei7uwGevWU', '2023-02-20 03:05:30', '2023-02-21 04:33:49'),
+(2, 'default', 'rishianand001@gmail.com', '2023-02-21 05:10:11', '$2y$10$GNS/qDwlgvhM2DULsIRTTeR3yPYl/XXHLO9Hj2GspL.AKt2UNJicq', 'QOVdQJQBZ2s4xx8RZwkIbDodPOelAsSOU4v05XUKdG5hBY1KvfedPosg9sBAcjxH', '2023-02-21 05:08:38', '2023-02-21 05:10:11');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

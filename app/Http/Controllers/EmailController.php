@@ -29,7 +29,7 @@ class EmailController extends Controller
             'material' => $request->material,
             'message' => $request->message
         );
-        $adminEmail = env('MAIL_FROM_ADDRESS');
+        $adminEmail = env('MAIL_ADMIN_ADDRESS');
 
         Mail::to($request->email)->send(new sendingEmail($data));
         Mail::to($adminEmail)->send(new sendingEmailToAdmin($data));

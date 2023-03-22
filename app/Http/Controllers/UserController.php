@@ -61,7 +61,7 @@ class UserController extends Controller
                         $request->session()->put('auth.email_verified_at', time());
                     }
                 }
-                return redirect()->intended('grades');
+                return redirect()->intended('about');
             }
             if ($user) {
                 $this->sendVerificationLinkEmail($request);

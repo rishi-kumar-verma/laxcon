@@ -161,15 +161,9 @@
                                 <option value="Square">Square</option>
                                 <option value="Equal Angle">Equal Angle</option>
                                 <option value="Hexagonal">Hexagonal</option>
-                                <option value="Octagonal">Octagonal</option>
                             </select>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col s12">
-                            <img src="resources/assets/images/calculator/sqr.jpg" name="pictures">
-                        </div>
-                    </div> -->
                     <div class="row">
                         <div class="col s6">
                             <input name="width" type="number" step="any" id="width" value="0" size="6" maxlength="6" onblur="CalculateWeight()" data-gtm-form-interact-field-id="1">
@@ -177,11 +171,8 @@
                         </div>
                         <div class="col s6">
                             <select name="unitsw" id="unitsw" onchange="CalculateWeight()">
-                                <option value="mm">mm</option>
-                                <option value="cm">cm</option>
-                                <option value="m">m</option>
                                 <option value="in" selected="selected">in</option>
-                                <option value="ft">ft</option>
+                                <option value="mm">mm</option>
                             </select>
                         </div>
                     </div>
@@ -192,11 +183,9 @@
                         </div>
                         <div class="col s6">
                             <select name="unitsd" id="unitsd" onchange="CalculateWeight()">
-                                <option value="mm">mm</option>
-                                <option value="cm">cm</option>
-                                <option value="m">m</option>
                                 <option value="in" selected="selected">in</option>
-                                <option value="ft">ft</option>
+                                <option value="mm">mm</option>
+                               
                             </select>
                         </div>
                     </div>
@@ -207,11 +196,8 @@
                         </div>
                         <div class="col s6">
                             <select name="unitsl" id="unitsl" onchange="CalculateWeight()" data-gtm-form-interact-field-id="2">
-                                <option value="mm">mm</option>
-                                <option value="cm">cm</option>
-                                <option value="m">m</option>
                                 <option value="in" selected="selected">in</option>
-                                <option value="ft">ft</option>
+                                <option value="mm">mm</option>
                             </select>
                         </div>
                     </div>
@@ -222,18 +208,6 @@
                         </div>
                         <div class="col s6">
                             <input type="button" name="clear" id="clear" value="Clear" onclick="ClearFields('Flat/Rectangle')">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s6">
-                            <strong>Calculated Weight: (lb)</strong>
-                        </div>
-                        <div class="col s6">
-                            <p class="result">
-                                <span id="wkg">
-                                    <input type="text" maxlength="8" name="result" size="10" spellcheck="false" data-ms-editor="true">
-                                </span>lb
-                            </p>
                         </div>
                     </div>
                     <div class="row">

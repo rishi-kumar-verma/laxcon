@@ -52,7 +52,7 @@ class GradesController extends Controller
             }
         }
         if ($request->subgradeName) {
-            $subGradesList = SubGrades::where('subgradeName', $request->subgradeName)->get();
+            $subGradesList = SubGrades::where('subgradeName', 'LIKE','%'.$request->subgradeName.'%')->get();
             $count = count($subGradesList);
             return view('grades', compact(['subGradesList', 'query', 'count']));
         }
