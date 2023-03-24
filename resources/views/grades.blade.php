@@ -69,17 +69,19 @@
 <!-- BEGIN BODY -->
 
 <body class="html" data-header="light" data-footer="light" data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
-    <!-- <div class="preloader-background">
+    <div class="preloader-background">
         <div class="preloader-wrapper">
             <div id="preloader"></div>
         </div>
-    </div> -->
+    </div>
 
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" class="brand-logo ">Grades</a>
-
+            <a id="logo-container" class="brand-logo brand-logo-title">Grades</a>
+           
+            <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
+            
             <a href="" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
             <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
             <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
@@ -117,34 +119,7 @@
             </ul>
         </li>
     </ul>
-    <ul id="slide-settings" class="sidenav sidesettings ">
-        <li class="menulinks">
-            <ul class="collapsible">
-                <!-- Menu Settings Start-->
 
-                <li class="lvl1  site_mode">
-                    <div class="waves-effect appsettings active" data-type="site_mode" data-value="light">
-                        <a href="#!">
-                            <i class="mdi mdi-checkbox-intermediate"></i>
-                            <span class="title">Light Mode</span> </a>
-                    </div>
-                </li>
-                <li class="lvl1  site_mode">
-                    <div class="waves-effect appsettings " data-type="site_mode" data-value="dark">
-                        <a href="#!">
-                            <i class="mdi mdi-checkbox-blank-outline"></i>
-                            <span class="title">Dark Mode</span> </a>
-                    </div>
-                </li>
-                <li class="sep-wrap">
-                    <div class="divider"></div>
-                </li>
-                <li class="sh-wrap">
-                    <div class="subheader">Header Style</div>
-                </li>
-            </ul>
-        </li>
-    </ul>
 
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <!--  SIDEBAR - END -->
@@ -239,7 +214,7 @@
                                                         <td>{{ Config::get('constants.fe') }} (Fe%)</td>
                                                         <td>: {{$grade->fe}}</td>
                                                     </tr>
-                                                     <tr>
+                                                    <tr>
                                                         <td>{{ Config::get('constants.v') }} (V%)</td>
                                                         <td>: {{$grade->v}}</td>
                                                     </tr>

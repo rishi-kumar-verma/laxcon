@@ -33,7 +33,7 @@ class EmailController extends Controller
 
         Mail::to($request->email)->send(new sendingEmail($data));
         Mail::to($adminEmail)->send(new sendingEmailToAdmin($data));
-        return back()->with('success', 'Thanks for contacting us!');
+        return back()->with('success', 'Thanks for contacting us! We will be in touch with you shortly.');
     }
 
 }

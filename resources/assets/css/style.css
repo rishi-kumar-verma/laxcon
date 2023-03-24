@@ -297,3 +297,24 @@ table>tbody>tr td:nth-child(2) {
 select {
     display: unset !important;
 }
+
+.brand-logo-title {
+    left: 10% !important;
+}
+
+.pagetitle-or {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 0px;
+    color: #E53935;
+    font-weight: bold;
+}
+
+.pagetitle-or::after {
+    display: block;
+    position: relative;
+    content: " ";
+    width: 30px;
+    background: content-box;
+}

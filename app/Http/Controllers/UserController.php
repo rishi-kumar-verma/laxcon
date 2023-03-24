@@ -219,7 +219,7 @@ class UserController extends Controller
             'token' => $token
         );
         Mail::to($request->email)->send(new verificationEmail($data),  $token);
-        return back()->with('success', 'Verification Email Send!');
+        return back()->with('success', "Verification link sent on your email. Please click the link to verify your email and login again. Please check your Spam / Junk folder if you can't find it in your Inbox.");
     }
 
     /**

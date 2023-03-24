@@ -56,7 +56,26 @@
     <!-- CORE CSS TEMPLATE - END -->
     <!-- Styles -->
     <style>
+        .card-alert button {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: medium none;
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            color: inherit;
+        }
 
+        .card-alert a {
+            color: inherit;
+            font-weight: 500;
+        }
+
+        .card-alert a:hover {
+            color: inherit;
+            text-decoration: underline;
+        }
     </style>
 
     <style>
@@ -74,9 +93,17 @@
             <div id="preloader"></div>
         </div>
     </div>
+
+    <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="" class=" brand-logo "><img src="resources/assets/images/logo.png"></a>
+            <a id="logo-container" class="brand-logo brand-logo-title">Query</a>
+
+            <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
+
+            <a href="" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
+            <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
+            <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
         </div>
     </nav>
 
@@ -86,10 +113,10 @@
         <div class="content-area">
 
             <div class="container  is-pagetitle">
-                <div class="section" style="width:65%">
-                    @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
+                <div class="section">
+                    @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissable">
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
                         <ul>
                             @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -97,10 +124,27 @@
                         </ul>
                     </div>
                     @endif
-                    @if ($message = Session::get('success'))
-                    <div class="alert alert-success alert-block">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>{{ $message }}</strong>
+
+                    @if(session()->get('success'))
+
+                    <div class="card-alert card green lighten-5">
+                        <div class="card-content green-text">
+                            {{ session()->get('success') }}
+                        </div>
+                        <button type="button" class="close green-text" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    @endif
+
+                    @if(session()->get('error'))
+                    <div class="card-alert card red lighten-5">
+                        <div class="card-content red-text">
+                            {{ session()->get('error') }}
+                        </div>
+                        <button type="button" class="close red-text" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
                     </div>
                     @endif
                 </div>
@@ -139,13 +183,13 @@
                                     <option value="Bright Bars (round / hex / square)">Bright Bars (round / hex / square)</option>
                                     <option value="Others">Others</option>
                                 </select>
-                                <label>Choose your option</label>
+                                <label>Select Product</label>
                             </div>
                         </div>
 
                         <div class="input-field col s12">
                             <textarea id="textarea-normal" name="message" class="materialize-textarea validate"></textarea>
-                            <label for="textarea-normal">Text area</label>
+                            <label for="textarea-normal">Query</label>
                         </div>
                         <div class="center">
 
@@ -169,6 +213,13 @@
         $(document).ready(function() {
             $('select').formSelect();
         });
+    </script>
+     <script>
+        $(document).ready(function() {
+            $('.card-alert > button').on('click', function() {
+                $(this).closest('div.card-alert').fadeOut('slow');
+            })
+        })
     </script>
 </body>
 

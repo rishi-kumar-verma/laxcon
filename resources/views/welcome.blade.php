@@ -74,7 +74,7 @@
     </div>
     <!--  SIDEBAR - END -->
     <div class="content-area">
-        <h1 class="white-text center welcome-logo index-welcome"><a href=""><img src="resources/assets/images/logo.png"></a></h1>
+        <h1 class="white-text center welcome-logo index-welcome"><a href="{{url('/')}}"><img src="resources/assets/images/logo.png"></a></h1>
         <div class="fullfixed index-carousel">
 
             <div class="carousel carousel-fullscreen carousel-slider">
@@ -132,7 +132,7 @@
         </div>
 
         <div class="center index-start">
-            <a href="login" class='waves-light btn-large red darken-1 tooltipped col s2'> Get Started
+            <a href="{{url('/login')}}" class='waves-light btn-large red darken-1 tooltipped col s2'> Get Started
             </a>
         </div>
     </div><!--.content-area-->
