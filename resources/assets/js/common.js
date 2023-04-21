@@ -192,7 +192,7 @@ function CalculateWeight(value) {
 
     Param[0] = UnitConvertI(Param[0], Units[0]);
     Param[1] = UnitConvertI(Param[1], Units[1]);
-    Param[2] = UnitConvertF(Param[2], Units[2]);
+    Param[2] = UnitConvertI(Param[2], Units[2]);
 
     FormType = document.forms['calculator'].shape.value;
     Convert = 1;

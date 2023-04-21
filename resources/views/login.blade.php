@@ -89,7 +89,11 @@
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
+<<<<<<< HEAD
             
+=======
+            <a id="logo-container" class="brand-logo brand-logo-title">Login</a>
+>>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
 
             <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
 
@@ -130,7 +134,10 @@
             <div class="section">
 
                 <br><br>
+<<<<<<< HEAD
                  <h4 class="titlered">LOGIN</h4>
+=======
+>>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
                 @if ($errors->any())
                 <div class="alert alert-danger alert-dismissable">
                     <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>

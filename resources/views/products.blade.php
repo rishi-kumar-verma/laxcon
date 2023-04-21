@@ -78,7 +78,11 @@
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
+<<<<<<< HEAD
             
+=======
+            <a id="logo-container" class="brand-logo brand-logo-title">Products</a>
+>>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
            
             <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
             
@@ -151,8 +155,11 @@
         <br>
         <div class="content-area">
             <div class="container is-pagetitle">
+<<<<<<< HEAD
                 <h6 class="pagetitle titlered">Products</h6>
                
+=======
+>>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
                 <h6>Our integrated manufacturing edge gives us the ability to produce steel in a variety of finishes, surface options and profiles. Our bright bars and precision shaft bars are reputed for their quality and metallurgy. Our ingots and RCS are popular among processors who use it for further machining .</h6>
 <br>
                 <div class="row ui-mediabox portfolio  ">
