@@ -78,11 +78,7 @@
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-<<<<<<< HEAD
             
-=======
-            <a id="logo-container" class="brand-logo brand-logo-title">Calculator</a>
->>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
            
             <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
             
@@ -177,11 +173,7 @@
                             <label for="width" id="lbl1">Width</label>
                         </div>
                         <div class="col s6">
-<<<<<<< HEAD
                             <select name="unitsw" id="unitsw" onchange="CalculateWeight(this.value)">
-=======
-                            <select name="unitsw" id="unitsw" onchange="CalculateWeight()">
->>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
                                 <option value="in" selected="selected">in</option>
                                 <option value="mm">mm</option>
                             </select>
@@ -193,11 +185,7 @@
                             <label for="depth" id="lbl2">Depth</label>
                         </div>
                         <div class="col s6">
-<<<<<<< HEAD
                             <select name="unitsd" id="unitsd" onchange="CalculateWeight(this.value)">
-=======
-                            <select name="unitsd" id="unitsd" onchange="CalculateWeight()">
->>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
                                 <option value="in" selected="selected">in</option>
                                 <option value="mm">mm</option>
                                
@@ -210,11 +198,7 @@
                             <label for="length" id="lbl3">Length </label>
                         </div>
                         <div class="col s6">
-<<<<<<< HEAD
                             <select class="select optional"  name="unitsl" id="unitsl" onchange="CalculateWeight(this.value)" data-gtm-form-interact-field-id="2">
-=======
-                            <select name="unitsl" id="unitsl" onchange="CalculateWeight()" data-gtm-form-interact-field-id="2">
->>>>>>> ceaacd73a1f56bab684796ce34343693f7134048
                                 <option value="in" selected="selected">in</option>
                                 <option value="mm">mm</option>
                             </select>
