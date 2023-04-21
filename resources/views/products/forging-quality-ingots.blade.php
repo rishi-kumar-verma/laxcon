@@ -158,7 +158,7 @@
                 <div class="section">
 
                     <img alt="image" style="width: 100%;" src="resources/assets/images/frogingbille.jpg">
-                    <p>Content Awaiting</p>
+                    <p>We produce high quality stainless steel as cast ingots for forging applications. Our wide range of size viability gives customers the right to choose the right sizes based on their applications. Product is used for direct upsetting forging, open die forging, Re- Rolling, Ring Rolling, Flanges and other engineering cases. quality ingots of all international/ national specifications of all categories like stainless</p>
 
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query

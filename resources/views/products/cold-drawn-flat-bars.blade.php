@@ -158,7 +158,7 @@
                 <div class="section">
 
                     <img alt="image" style="width: 100%;" src="resources/assets/images/flatbars.jpg">
-                    <p>Content Awaiting</p>
+                    <p>Cold Drawing is a process in which the pointed end of the bar or coil is passed through the die where it enters a gripping device of the drawing machine. The drawing machine draws the remaining unreduced section of the bar through the die. The die reduces the cross sectional area of the original bar, increases the length of the original product and shapes the profile of the product. The final product being drawn is at room temperature i.e. cold drawn which exhibits a bright and polished finish, improved machining characteristics, increased mechanical properties, precise and uniform dimensional tolerances.</p>
 
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query

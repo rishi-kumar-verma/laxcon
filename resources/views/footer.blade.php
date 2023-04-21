@@ -1,6 +1,16 @@
 <div class="footer-menu circular">
     <ul>
         <li>
+            <a href="about"> <i class="mdi mdi-laptop"></i>
+                <span>About Us</span>
+            </a>
+        </li>
+        <li>
+            <a href="products"> <i class="mdi mdi-home-outline"></i>
+                <span>Products</span>
+            </a>
+        </li>
+        <li>
             <a href="grades"> <i class="mdi mdi-atom"></i>
                 <span>Grades</span>
             </a>
@@ -10,19 +20,11 @@
                 <span>Calculator</span>
             </a>
         </li>
-        <li>
-            <a href="products"> <i class="mdi mdi-home-outline"></i>
-                <span>Products</span>
-            </a>
-        </li>
-        <li>
-            <a href="about"> <i class="mdi mdi-laptop"></i>
-                <span>About Us</span>
-            </a>
-        </li>
+        
+        
         <li>
             <a href="contact"> <i class="mdi mdi-phone"></i>
-                <span>Contact</span>
+                <span>Contact Us</span>
             </a>
         </li>
 
@@ -51,7 +53,12 @@
 
 <script src="resources/modules/app/scripts.js"></script>
 
+</script>
 <!-- END CORE TEMPLATE JS - END -->
-
+<script>
+    $(".footer-menu ul li a").click(function(){
+  $("this").addClass("intro");
+});
+</script>
 
 <script src="resources/assets/js/preloader.js"></script>

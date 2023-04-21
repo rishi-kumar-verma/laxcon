@@ -159,7 +159,7 @@
 
 
                     <img alt="image" style="width: 100%;" src="resources/assets/images/sqaurebrightbar.jpg">
-                    <p>Content Awaiting</p>
+                    <p>Square bright bars are produced from hot-rolled bars through cold drawing, centreless grinding Process. We manufacture Square bright bars with enhanced mechanical properties, greater dimensional accuracy, subtle surface finish, and are free from surface defects. Our Square bright bar’s quality makes them a preferred choice of various leading industries that demand high dimensional accuracy and perfection.</p>
 
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query

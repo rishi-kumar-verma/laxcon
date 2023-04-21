@@ -69,7 +69,7 @@
 <!-- BEGIN BODY -->
 
 <body class="html" data-header="light" data-footer="light" data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
-    <div class="preloader-background">
+<div class="preloader-background">
         <div class="preloader-wrapper">
             <div id="preloader"></div>
         </div>
@@ -78,22 +78,17 @@
     <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" class=" brand-logo ">Grades</a>
-
+           
+           
+            <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
+            
             <a href="" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
-
-
-
-
-
-
             <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
             <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
         </div>
     </nav>
 
     <!-- END navigation -->
-
 
     <ul id="slide-settings" class="sidenav sidesettings ">
         <li class="menulinks">
@@ -159,14 +154,23 @@
         <div class="content-area">
             <div class="container">
                 <div class="section">
-                    <h6 class="pagetitle">Enter Material Value</h6>
+                    <h6 class="pagetitle">Search By Grade</h6>
                     <form method="post" id="search-form-data" name="search-form-data" action="grades" enctype="multipart/form-data">
                         @csrf
-
                         <div class="input-field col s12">
                             <input id="subgradeName" type="text" class="validate" name="subgradeName" placeholder="Grade Name" value="">
                             <label for="first_name1">Grade Name</label>
                         </div>
+                        <div class="center">
+                                <button type="submit" class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">DISPLAY GRADE</button>
+                        </div>
+                    </form>
+                </div>
+            <h6 class="pagetitle-or">OR</h6>
+                <div class="section">
+                    <h6 class="pagetitle">Enter Material Value</h6>
+                    <form method="post" id="search-form-data" name="search-form-data" action="grades" enctype="multipart/form-data">
+                        @csrf
                         <div class="input-field col s12">
                             <input id="ni" type="number" step="any" class="validate" name="ni" placeholder="{{ Config::get('constants.ni') }}" value="">
                             <label for="first_name1">{{ Config::get('constants.ni') }}(Ni%)</label>

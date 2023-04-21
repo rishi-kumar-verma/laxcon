@@ -159,7 +159,7 @@
 
 
                     <img alt="image"  style="width: 100%;" src="resources/assets/images/hexagonalbrightbar.jpg">
- <p>Content Awaiting</p>
+ <p>Hexagonal Bright bars are produced with high strength and corrosion resistance durability which make them suitable for various applications like manufacturing nuts, valves, hose ends, fasteners and hex bolts.</p>
     
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query

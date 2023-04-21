@@ -42,6 +42,7 @@
     <link href="resources/modules/fonts/mdi/appicon/appicon.css" type="text/css" rel="stylesheet" media="screen" />
     <link href="resources/modules/fonts/mdi/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen" />
     <link href="resources/modules/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="modules/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="screen"/>
 
 
     <!-- CORE CSS FRAMEWORK - END -->
@@ -69,29 +70,26 @@
 <!-- BEGIN BODY -->
 
 <body class="html" data-header="light" data-footer="light" data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
-    <div class="preloader-background">
+<div class="preloader-background">
         <div class="preloader-wrapper">
             <div id="preloader"></div>
         </div>
     </div>
+
+    <!-- START navigation -->
     <nav class="fixedtop topbar navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" class=" brand-logo ">About Us</a>
-
-            <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
-
-
-
-
-
-
+            
+           
+            <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
+            
+            <a href="" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
             <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
             <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
         </div>
     </nav>
 
     <!-- END navigation -->
-
 
     <ul id="slide-settings" class="sidenav sidesettings ">
         <li class="menulinks">
@@ -154,7 +152,7 @@
         <div class="content-area">
 
 
-            <div class="carousel carousel-fullscreen carousel-slider about_carousel ">
+            <div class="carousel carousel-fullscreen carousel-slider home_carousel ">
                 <a class="carousel-item" href="#about-slide-0!">
                     <div class="bg" style="background-image: url('resources/assets/images/abouimage2.jpg')"></div>
 
@@ -174,16 +172,15 @@
             </div>
 
 
-            <div class="container">
+            <div class="container is-pagetitle">
+                <h6 class="pagetitle titlered">About Us</h6>
+                
                 <div class="section">
-
-                    <p>"Laxcon Steels Limited" is a fully integrated steel mill and one of the leding producers of high-quality stailess steels and special steels equipped with top-touch
-                        equipment, such as mulitple electric furnaces, A.O.D. converters, ESR Continuous caster, vacuum degassing and vacuum oxygen decrburization systems.</p>
-                    <p>"An Extensive range of long products, including as it does Bright bars, Angles bars, Flat bars, Squares, Hexagons, Rolled bars, Forged bars, Round corner squares,
-                        Continuous cast billets and Ingots.</p>
-                    <p>"Laxcon can also supply special and customized grades as per customer's specific requirements with a heat size of 35 tons. Laxcon is perfectly equipped to offer a wide
-                        variety of grades with modified or varied chemical composition to customer specifications.</p>
-                    <p>"We are one of just a handfull of companies globally that can offer such a diverse product and size range.</p>
+                    <strong>A ONE-STOP-SHOP FOR STAINLESS STEEL LONG PRODUCTS</strong>
+                    <p>With a strong infrastructure backbone and absolute emphasis on quality, Laxcon is the first choice for stockists, processors and end-users for cold and hot finished products.</p>
+                    <p>Making steel is a fine art that comes when experience is mixed with knowledge and powered by the right tools. Laxcon Steels vision has always been to reign supreme on the parameter of quality and choice. To give its customers a plethora of choices when it comes to special steel.</p>
+                    <p>Since the year of inception in 1978, it has ploughed in its profits and success to expand its infrastructure and also to attract the right talent - the metallurgists and processors.</p>
+                    <p>Today, it has covered a respectable distance in terms of its annual output and reputation that resonates across several countries and continents. It is a benchmark for many as an ideal model of family run business coupled with professional management.</p>
 
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query
@@ -207,39 +204,54 @@
 
     @include('footer')
 
-    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
-    <script type="text/javascript">
-        $(document).ready(function() {
+  <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+<script type="text/javascript">
+  $(document).ready(function(){
+      
+      $(".carousel-fullscreen.carousel-slider").carousel({
+        fullWidth: true,
+        indicators: true
+      });
+      setTimeout(autoplay, 3500);
+      function autoplay() {
+          $(".carousel").carousel("next");
+          setTimeout(autoplay, 3500);
+      }
 
-            $(".carousel-fullscreen.carousel-slider").carousel({
-                fullWidth: true,
-                indicators: true,
-            }).css("height", $(window).height());
-            setTimeout(autoplay, 3500);
+      $(".slider3").slider({
+                indicators: false,
+                height: 200,
+     });
 
-            function autoplay() {
-                $(".carousel-fullscreen.carousel-slider").carousel("next");
-                setTimeout(autoplay, 3500);
-            }
+  }); 
+    </script><script src="modules/fancybox/jquery.fancybox.min.js" type="text/javascript"></script>
+<script type="text/javaScript">
+  $("[data-fancybox=images]").fancybox({
+  buttons : [ 
+    "slideShow",
+    "share",
+    "zoom",
+    "fullScreen",
+    "close",
+    "thumbs"
+  ],
+  thumbs : {
+    autoStart : false
+  }
+});
+</script><script src="assets/js/common.js"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
 
-        });
-    </script>
-    <script src="resources/modules/fancybox/jquery.fancybox.min.js" type="text/javascript"></script>
-    <script type="text/javaScript">
-        $("[data-fancybox=images]").fancybox({
-            buttons : [ 
-                "slideShow",
-                "share",
-                "zoom",
-                "fullScreen",
-                "close",
-                "thumbs"
-            ],
-            thumbs : {
-                autoStart : false
-            }
-            });
-    </script>
+
+<!-- CORE TEMPLATE JS - START -->
+<script src="modules/app/init.js"></script>
+<script src="modules/app/settings.js"></script>
+
+<script src="modules/app/scripts.js"></script>
+
+<!-- END CORE TEMPLATE JS - END -->
+
+
+<script src="assets/js/preloader.js"></script>
 
 </body>
 

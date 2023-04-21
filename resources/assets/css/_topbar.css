@@ -8,8 +8,9 @@
     width: 85%;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 19px;
 }
+
 .logo-margin{
 	margin:10px 0px !important;
 }
@@ -166,3 +167,4 @@ nav.navigation{
 [data-header="colored"] nav .brand-logo, [data-header="colored"] nav .navicon{
   color: #ffffff;
 }
+

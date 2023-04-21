@@ -1,6 +1,7 @@
 /*----------------------------------------
   General Layout
 ------------------------------------------*/
+
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -248,4 +249,9 @@ body .accent-text {
 }
 .breadcrumb.black-text:before {
 	color: rgba(50, 50, 50, 0.7);
+}
+.titlered{
+    color: #e53935;
+    margin-bottom: -5px;
+        font-weight: bold;
 }

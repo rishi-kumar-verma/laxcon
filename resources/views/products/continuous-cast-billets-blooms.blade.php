@@ -158,7 +158,7 @@
                 <div class="section">
 
                     <img alt="image" style="width: 100%;" src="resources/assets/images/continouscrabillest.jpg">
-                    <p>Content Awaiting</p>
+                    <p>These are obtained directly from the steel solidification process without any deformation process. Bloom & billet casters continuously cast molten steel into semi-products of various sizes and shapes in various kinds of steel grades with cross-section smaller than slab semi-products.</p>
 
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query

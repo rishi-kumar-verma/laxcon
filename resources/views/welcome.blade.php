@@ -74,55 +74,57 @@
     </div>
     <!--  SIDEBAR - END -->
     <div class="content-area">
-        <h1 class="white-text center welcome-logo index-welcome"><a href=""><img src="resources/assets/images/logo.png"></a></h1>
+        <h1 class="white-text center welcome-logo index-welcome"><a href="{{url('/')}}"><img src="resources/assets/images/logo.png"></a></h1>
         <div class="fullfixed index-carousel">
 
             <div class="carousel carousel-fullscreen carousel-slider">
 
                 <a class="carousel-item" href="#carousel-slide-0!">
-                    <div class="bg" style="background-image: url('resources/assets/images/three.jpg')"></div>
+                    <div class="bg" style="background-image: url('resources/assets/images/two.jpg')"></div>
+                   
                     <div class="item-content center-align white-text">
 
                         <div class="spacer-xlarge"></div>
                         <div class="spacer-xlarge"></div>
 
-                        <h5 class="light white-text">Today, it has covered a respectable distance in terms of its annual output and reputation that resonates</h5>
+                        <h4 class="light white-text">Integrated Approach to making WORLD CLASS STAINLESS</h4>
 
                     </div>
 
                 </a>
                 <a class="carousel-item" href="#carousel-slide-1!">
-                    <div class="bg" style="background-image: url('resources/assets/images/two.jpg')"></div>
+                    <div class="bg" style="background-image: url('resources/assets/images/one.jpg')"></div>
+                     
                     <div class="item-content center-align white-text">
 
                         <div class="spacer-xlarge"></div>
                         <div class="spacer-xlarge"></div>
 
-                        <h5 class="light white-text">To give its customers a plethora of choices when it comes to special steel.</h5>
+                        <h4 class="light white-text">Built for Global Stainless Impact</h4>
 
                     </div>
 
                 </a>
                 <a class="carousel-item" href="#carousel-slide-2!">
-                    <div class="bg" style="background-image: url('resources/assets/images/one.jpg')"></div>
+                    <div class="bg" style="background-image: url('resources/assets/images/four.jpg')"></div>
                     <div class="item-content center-align white-text">
-
+                        
                         <div class="spacer-xlarge"></div>
                         <div class="spacer-xlarge"></div>
 
-                        <h5 class="light white-text">Laxcon Steels vision has always been to reign supreme on the parameter of quality and choice. </h5>
+                        <h4 class="light white-text">140,000 MT / annum production Capacity</h4>
 
                     </div>
 
                 </a>
                 <a class="carousel-item" href="#carousel-slide-3!">
-                    <div class="bg" style="background-image: url('resources/assets/images/four.jpg')"></div>
-                    <div class="item-content center-align white-text">
-
+                     <div class="bg" style="background-image: url('resources/assets/images/three.jpg')"></div>
+                     <div class="item-content center-align white-text">
+                       
                         <div class="spacer-xlarge"></div>
                         <div class="spacer-xlarge"></div>
 
-                        <h5 class="light white-text">Making steel is a fine art that comes when experience is mixed with knowledge and powered by the right tools.</h5>
+                        <h4 class="light white-text">45+ years of Stainless Revolution</h4>
 
                     </div>
 
@@ -132,7 +134,7 @@
         </div>
 
         <div class="center index-start">
-            <a href="login" class='waves-light btn-large red darken-1 tooltipped col s2'> Get Started
+            <a href="{{url('/login')}}" class='waves-light btn-large red darken-1 tooltipped col s2'> Get Started
             </a>
         </div>
     </div><!--.content-area-->

@@ -55,13 +55,29 @@
     <link href="resources/assets/css/style.css" type="text/css" rel="stylesheet" media="screen" id="main-style" />
     <!-- CORE CSS TEMPLATE - END -->
     <!-- Styles -->
+    <style>
+        .card-alert button {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: medium none;
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            color: inherit;
+        }
 
+        .card-alert a {
+            color: inherit;
+            font-weight: 500;
+        }
+
+        .card-alert a:hover {
+            color: inherit;
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<nav class="fixedtop topbar navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="" class="brand-logo logo-margin"><img src="resources/assets/images/logo.png"></a>
-    </div>
-</nav>
 
 <body class="html" data-header="light" data-footer="light" data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
     <div class="preloader-background">
@@ -69,6 +85,21 @@
             <div id="preloader"></div>
         </div>
     </div>
+
+    <!-- START navigation -->
+    <nav class="fixedtop topbar navigation">
+        <div class="nav-wrapper container">
+            
+
+            <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="resources/assets/images/logo.png"></a>
+
+            <a href="" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-chevron-left" data-page=""></i></a>
+            <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="mdi mdi-invert-colors mdi-transition1"></i></a>
+            <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+        </div>
+    </nav>
+
+    <!-- END navigation -->
 
 
 
@@ -99,7 +130,40 @@
             <div class="section">
 
                 <br><br>
+                 <h4 class="titlered">LOGIN</h4>
+                @if ($errors->any())
+                <div class="alert alert-danger alert-dismissable">
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
 
+                @if(session()->get('success'))
+
+                <div class="card-alert card green lighten-5">
+                    <div class="card-content green-text">
+                        {{ session()->get('success') }}
+                    </div>
+                    <button type="button" class="close green-text" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                @endif
+
+                @if(session()->get('error'))
+                <div class="card-alert card red lighten-5">
+                    <div class="card-content red-text">
+                        {{ session()->get('error') }}
+                    </div>
+                    <button type="button" class="close red-text" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                @endif
                 <h6 class="pagetitle">GET STARTED</h6>
                 <div class="input-field col s12 ">
                     <form method="POST" action="user-login">
@@ -170,6 +234,14 @@
 
 
     <script src="resources/assets/js/preloader.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.card-alert > button').on('click', function() {
+                $(this).closest('div.card-alert').fadeOut('slow');
+            })
+        })
+    </script>
 
 </body>
 

@@ -159,7 +159,7 @@
 
 
                     <img alt="image" style="width: 100%;" src="resources/assets/images/channel.jpg">
-                    <p>Content Awaiting</p>
+                    <p>We manufacture channels in different shapes, sizes and grades of materials. There are C channels that have three angled stretches. We produce and distribute hot rolled and laser fused stainless steel channels throughout the world in both imperial and metric sizes.</p>
 
                     <div class="center">
                         <a href="sendaquery"><button class="btn-full waves-effect waves-light red darken-1 tooltipped col s2">Send a Query
